@@ -44,20 +44,19 @@ export const TaskItem = ({ task, onToggleComplete }: TaskItemProps) => {
       
       <Button
         onClick={() => onToggleComplete(task.id)}
-        variant={task.completed ? "secondary" : "default"}
+        variant={task.completed ? "outline" : "default"}
         size="sm"
         className={cn(
-          "transition-all duration-300",
+          "transition-all duration-300 hover:scale-105",
           task.completed 
-            ? "opacity-50 cursor-default" 
-            : "hover:scale-105 animate-pulse-glow"
+            ? "hover:bg-destructive/10 hover:text-destructive hover:border-destructive/30" 
+            : "animate-pulse-glow"
         )}
-        disabled={task.completed}
       >
         {task.completed ? (
           <>
             <Check className="w-4 h-4 mr-2" />
-            Terminé
+            Annuler
           </>
         ) : (
           "Valider"
