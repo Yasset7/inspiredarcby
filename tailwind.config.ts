@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
+				'ml-cert': 'hsl(var(--ml-cert))',
+				'aws-cert': 'hsl(var(--aws-cert))',
+				'terraform-cert': 'hsl(var(--terraform-cert))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +79,19 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-success': 'var(--gradient-success)',
+				'gradient-ml': 'var(--gradient-ml)',
+				'gradient-aws': 'var(--gradient-aws)',
+				'gradient-terraform': 'var(--gradient-terraform)',
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)',
+				'button': 'var(--shadow-button)',
+				'hover': 'var(--shadow-hover)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +109,28 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0.3)', opacity: '0' },
+					'50%': { transform: 'scale(1.05)' },
+					'70%': { transform: 'scale(0.9)' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 5px hsl(var(--primary) / 0.5)' },
+					'50%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.8)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-in': 'bounce-in 0.6s var(--bounce) both',
+				'slide-up': 'slide-up 0.4s ease-out both',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 			}
 		}
 	},
