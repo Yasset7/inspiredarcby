@@ -4,8 +4,8 @@ export const phases: Phase[] = [
   {
     id: 1,
     name: "Fondamentaux",
-    startDate: "2024-09-13",
-    endDate: "2024-09-30",
+    startDate: "2025-09-13",
+    endDate: "2025-09-30",
     description: "Machine Learning, AWS Architect et Terraform",
     color: 'gradient-ml',
     tasks: [
@@ -18,8 +18,8 @@ export const phases: Phase[] = [
   {
     id: 2,
     name: "Spécialisation AWS ML",
-    startDate: "2024-10-01",
-    endDate: "2024-10-25",
+    startDate: "2025-10-01",
+    endDate: "2025-10-25",
     description: "AWS ML Specialty et ML Engineer",
     color: 'gradient-aws',
     tasks: [
@@ -31,8 +31,8 @@ export const phases: Phase[] = [
   {
     id: 3,
     name: "Approfondissement",
-    startDate: "2024-10-26",
-    endDate: "2024-11-15",
+    startDate: "2025-10-26",
+    endDate: "2025-11-15",
     description: "Stanford ML/AI et révisions complètes",
     color: 'gradient-terraform',
     tasks: [
