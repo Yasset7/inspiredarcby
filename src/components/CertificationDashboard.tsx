@@ -4,6 +4,7 @@ import { phases } from '@/lib/certification-data';
 import { saveProgress, loadProgress, calculateStats } from '@/lib/localStorage';
 import { DayCard } from './DayCard';
 import { StatsPanel } from './StatsPanel';
+import { DayProgressionBar } from './DayProgressionBar';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
@@ -152,6 +153,11 @@ export const CertificationDashboard = () => {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
         <StatsPanel stats={stats} />
+
+        {/* Day Progression Bar */}
+        <div className="bg-card rounded-lg p-6 shadow-card mb-8">
+          <DayProgressionBar dayPlans={dayPlans} />
+        </div>
         
         {/* Upcoming Days */}
         {upcomingDays.length > 0 && (
